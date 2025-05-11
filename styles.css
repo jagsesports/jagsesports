@@ -1,0 +1,527 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f3d1e3;
+  font-family: Arial, sans-serif;
+}
+
+.main-container {
+  width: 100%;
+}
+
+.socials-box {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 101;
+  background-color: #222;
+  color: white;
+  padding: 8px 40px; 
+  height: 45px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;  
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 5px; 
+}
+
+.socials a img {
+  width: 28px;
+  height: 28px;
+}
+
+.header {
+  background-color: #444;
+  padding: 10px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 45px;
+  width: 100%;
+  height: 80px;
+  z-index: 101;
+  padding-left: 240px;  
+}
+
+.mainLogo img {
+  position: absolute;
+  top: -110px; 
+  left: 20px;  
+  max-height: 300px;  
+  z-index: 106;  
+}
+
+.pages {
+  display: flex;
+  gap: 25px;
+}
+
+.pages a {
+  color: white;
+  text-decoration: none;
+  background-color: #E86D66;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.pages a:hover {
+  background-color: #c65553;
+  transform: scale(1.05);
+  text-decoration: none;
+}
+
+.video1 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 0;
+  padding-top: 125px; 
+  margin-bottom: 0;    
+}
+
+.FC25-Gameplay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.video1-overlay {
+  position: relative;
+  z-index: 2;
+  background-color: rgba(243, 209, 227, 0.5);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center; 
+  justify-content: center;  
+  color: #E86D66;
+  text-align: center;
+  padding-top: 0;   
+  margin-top: 0;      
+}
+
+.video1-overlay h1 {
+  font-size: 80px;
+  margin: 0;  
+  padding: 0;
+  position: absolute; 
+  top: 50%;
+  left: 50%;  
+  transform: translate(-50%, -50%); 
+}
+
+.section-1 {
+  position: relative;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  margin-top: 0;    
+  padding-top: 0;    
+}
+
+.info-box {
+  background-color: #222;
+  text-align: center;
+  height: 100vh;
+  width: 50%;
+  left: 0;
+  position: absolute;
+}
+
+.info-box h1 {
+  font-size: 40px;
+  margin-top: 32px;  
+  color: #f3d1e3;
+  position: relative;
+  z-index: 3;
+}
+
+.section-1 img {
+  position: absolute;
+  height: 100vh;
+  width: 50%;
+  right: 0;
+  z-index: 5;
+}
+
+.gallery {
+  background-color: #f3d1e3;
+  color: #222;
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  padding: 32px 0;  
+  margin-top: 0;   
+}
+
+gallery h1 {
+  font-size: 40px;
+  color: #444;
+  margin-bottom: 48px;
+}
+
+.gallery h1 {
+  margin-top: 32px;
+  margin-bottom: 48px;
+}
+
+.carousel {
+  position: relative;
+  width: 90%;
+  height: 70vh;
+  margin: 0 auto;
+}
+
+.carousel-window {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.5s ease;
+}
+
+.carousel-slide {
+  flex: 0 0 33.333%;
+  padding: 0 16px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 3px solid #444;
+  border-radius: 12px;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 32px;
+  background: rgba(0, 0, 0, 0.3);
+  color: #E86D66;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.arrow.left {
+  left: -48px;
+}
+
+.arrow.right {
+  right: -48px;
+}
+
+.arrow:hover {
+  background: rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .carousel-track img {
+    flex: 0 0 100%;
+    height: 250px;
+  }
+
+  .arrow {
+    font-size: 24px;
+  }
+}
+
+.store-section {
+  width: 100%;
+  background-color: #E86D66;
+  display: flex;
+  position: relative;
+  min-height: 100vh;
+  padding-top: 0;    
+  margin-top: 0;    
+}
+
+.store-banner {
+  width: 50%;
+  height: 100vh;
+}
+
+.store-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.store-content {
+  width: 50%;
+  padding: 32px;
+  background-color: #E86D66;
+  overflow-y: auto;
+}
+
+.store-content h2 {
+  text-align: center;
+  font-size: 40px;
+  color: #222;
+  margin-top: 32px;  
+  margin-bottom: 48px;
+}
+
+.merch-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 24px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.merch-img {
+  width: 200px;
+  height: 200px;
+  margin-right: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.merch-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.merch-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.merch-title {
+  font-size: 24px;
+  color: #222;
+  margin: 0;
+}
+
+.merch-price {
+  font-size: 20px;
+  color: #E86D66;
+  font-weight: bold;
+  margin: 0;
+}
+
+.merch-buy {
+  display: inline-block;
+  background-color: #E86D66;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  min-width: 120px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.merch-buy:hover {
+  background-color: #c65553;
+}
+
+@media screen and (max-width: 768px) {
+  .store-section {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .store-banner,
+  .store-content {
+    width: 100%;
+  }
+
+  .store-banner {
+    height: 300px;
+  }
+
+  .merch-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .merch-img {
+    margin: 0 0 16px 0;
+    width: 200px;
+    height: 200px;
+  }
+
+  .merch-info {
+    align-items: center;
+  }
+}
+
+.signup-button {
+  display: inline-block;
+  background-color: #E86D66;
+  color: white;
+  padding: 12px 24px;
+  margin: 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.signup-button:hover {
+  background-color: #c65553;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.footer {
+  background-color: #222;
+  color: #E86D66;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  clear: both;
+}
+
+.footer-btn {
+  display: inline-block;
+  background-color: #E86D66;
+  color: white;
+  padding: 12px 24px;
+  margin: 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer-btn:hover {
+  background-color: #c65553;
+}
+
+@media screen and (max-width: 1024px) {
+  .video1-overlay h1 {
+    font-size: 60px;
+  }
+
+  .carousel {
+    width: 95%;
+  }
+
+  .arrow.left {
+    left: -32px;
+  }
+
+  .arrow.right {
+    right: -32px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 10px 15px;
+  }
+
+  .mainLogo img {
+    max-height: 240px;
+  }
+
+  .pages {
+    gap: 15px;
+  }
+
+  .video1-overlay h1 {
+    font-size: 40px;
+  }
+
+  .section-1 {
+    flex-direction: column;
+  }
+
+  .info-box,
+  .section-1 img {
+    width: 100%;
+    position: relative;
+  }
+
+  .store-section {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .store-banner,
+  .store-content {
+    width: 100%;
+    position: relative;
+  }
+
+  .store-banner {
+    height: 300px;
+  }
+
+  .merch-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .merch-img {
+    margin: 0 0 16px 0;
+    width: 200px;
+    height: 200px;
+  }
+
+  .merch-info {
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .pages a {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+
+  .video1-overlay h1 {
+    font-size: 32px;
+  }
+
+  .gallery h1,
+  .store-content h2 {
+    font-size: 32px;
+  }
+
+  .merch-title {
+    font-size: 20px;
+  }
+}

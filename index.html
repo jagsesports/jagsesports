@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jags-Info</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="socials-box">
+        <p>Stay Tapped In:</p>
+        <div class = "socials">
+            <a href = "https://www.youtube.com/@JagEsports"> <img src="images/youtubeLogo.svg" alt = "YouTube"> </a>
+            <a href = "#"> <img src="images/instaLogo.svg" alt = "Instagram"> </a>
+            <a href = "#"> <img src="images/tiktokLogo.svg" alt = "TikTok"> </a>
+        </div>
+    </header>
+    <div class="main-container">
+        <section class="header">
+            <div class="mainLogo"> <img src="images/mainLogo.png" alt = "Jags Esports Logo"></div>
+            <nav class="pages">
+                <a href="#">Home</a>
+                <a href="main.html">Information</a>
+            </nav>
+        </section>
+        <section id="home" class="video1">
+            <video autoplay muted loop playsinline class="FC25-Gameplay">
+              <source src="videos/placeholdervid1.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <div class="video1-overlay">
+              <h1 style="color:#E86D66";>Information:</h1>
+            </div>
+        </section>
+        <section class="section-1">
+            <div class="info-box">
+                <h1>What's Going On?</h1>  
+            </div>
+            <img src="images/placeholderimage.jpg" alt = "Placeholder">
+        </section>
+        <div id="app">
+            <section id="gallery" class="gallery">
+                <h1>Our Team's Work</h1>
+                <div class="carousel">
+                    <button class="arrow left" @click="prevSlide">←</button>
+                    <div class="carousel-window">
+                        <div class="carousel-track" :style="trackStyle">
+                            <div class="carousel-slide" v-for="(img, i) in images" :key="i">
+                                <img :src="img" :alt="'Work sample' + (i+1)">
+                            </div>
+                        </div>
+                    </div>
+                    <button class="arrow right" @click="nextSlide">→</button>
+                </div>
+            </section>
+            
+            <section id="store" class="store-section">
+                <div class="store-banner">
+                    <img src="images/placeholderimage.jpg" alt="Featured Merchandise">
+                </div>
+                <div class="store-content">
+                    <h2>Team Merchandise</h2>
+                    <div class="product-list">
+                        <div class="merch-card" v-for="(item,i) in merchItems" :key="i">
+                            <div class="merch-img">
+                                <img :src="item.image" :alt="item.name">
+                            </div>
+                            <div class="merch-info">
+                                <h3 class="merch-title">{{ item.name }}</h3>
+                                <p class="merch-price">{{ item.price }}</p>
+                                <a :href="item.buyLink" class="merch-buy">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <footer class="footer">
+            <h2>Join the Matches:</h2>
+            <a href="https://forms.gle/JDusy4tLjwktj7TCA" class="signup-button">Sign Up Now!</a>
+            <p>© 2025 ACS Egham</p>
+        </footer>
+    </div>
+<script src="https://unpkg.com/vue@3"></script>
+<script src="script.js"></script>
+</body>
+</html>
