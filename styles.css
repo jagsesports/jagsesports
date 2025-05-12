@@ -156,6 +156,49 @@ body {
   z-index: 3;
 }
 
+.info-list {
+  list-style: none;
+  padding: 20px 40px;
+  text-align: left;
+}
+
+.info-list li {
+  position: relative;
+  color: #f3d1e3;
+  padding: 15px 0 15px 40px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.info-list li::before {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background-color: #E86D66;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 768px) {
+  .info-list {
+    padding: 15px 20px;
+  }
+  
+  .info-list li {
+    font-size: 16px;
+    padding: 10px 0 10px 30px;
+    margin-bottom: 15px;
+  }
+
+  .info-list li::before {
+    width: 15px;
+    height: 15px;
+  }
+}
+
 .section-1 img {
   position: absolute;
   height: 100vh;
@@ -174,13 +217,10 @@ body {
   margin-top: 0;   
 }
 
-gallery h1 {
+.gallery h1 {
   font-size: 40px;
   color: #444;
   margin-bottom: 48px;
-}
-
-.gallery h1 {
   margin-top: 32px;
   margin-bottom: 48px;
 }
@@ -451,10 +491,13 @@ gallery h1 {
 @media screen and (max-width: 768px) {
   .header {
     padding: 10px 15px;
+    padding-left: 100px; 
   }
 
   .mainLogo img {
-    max-height: 240px;
+    max-height: 180px;
+    top: -50px; 
+    left: 10px;
   }
 
   .pages {
@@ -507,6 +550,12 @@ gallery h1 {
 }
 
 @media screen and (max-width: 480px) {
+  .mainLogo img {
+    top: -40px; 
+    left: 5px;
+    max-height: 150px; 
+  }
+
   .pages a {
     padding: 6px 12px;
     font-size: 14px;
