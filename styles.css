@@ -125,7 +125,7 @@ body {
   margin: 0;  
   padding: 0;
   position: absolute; 
-  top: 50%;
+  top: 40%;
   left: 50%;  
   transform: translate(-50%, -50%); 
 }
@@ -320,7 +320,7 @@ body {
 
 .store-banner {
   width: 50%;
-  height: 100vh;
+  height: 130vh;
 }
 
 .store-banner img {
