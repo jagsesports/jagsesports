@@ -18,19 +18,19 @@ const app = Vue.createApp({
           name: "Jags Team Jersey",
           image: "images/placeholderimage.jpg",
           price: "£30.00",
-          buyLink: "#"
+          buyLink: "https://blader1784.github.io/website/shop.html"
         },
         {
           name: "Jags Hoodie",
           image: "images/placeholderimage.jpg",
           price: "£40.00",
-          buyLink: "#"
+          buyLink: "https://blader1784.github.io/website/shop.html"
         },
         {
           name: "Jags Hoodie (Design 2)",
           image: "images/placeholderimage.jpg",
           price: "£40.00",
-          buyLink: "#"
+          buyLink: "https://blader1784.github.io/website/shop.html"
         }
       ]
     };
