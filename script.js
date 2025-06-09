@@ -3,15 +3,15 @@ const app = Vue.createApp({
     return {
       slideIndex: 0,
       images: [
-        "images/placeholderimage.jpg",
-        "images/placeholderimage.jpg",
-        "images/placeholderimage.jpg",
-        "images/placeholderimage.jpg",
-        "images/placeholderimage.jpg",
-        "images/placeholderimage.jpg",
-        "images/placeholderimage.jpg",
-        "images/placeholderimage.jpg",
-        "images/placeholderimage.jpg"
+        "\images\esportswork#1.jpeg",
+        "images/esportswork#2.jpeg",
+        "images/esportswork#3.png",
+        "images/esportswork#4.jpeg",
+        "images/esportswork#5.jpeg",
+        "images/esportswork#6.jpeg",
+        "images/esportswork#7.jpeg",
+        "images/esportswork#8.jpeg",
+        "images/esportswork#9.jpeg"
       ],
       merchItems: [
         {
